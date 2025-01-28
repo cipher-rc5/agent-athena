@@ -1,4 +1,5 @@
 // src/index.ts
+
 import { DirectClient } from '@elizaos/client-direct';
 import { AgentRuntime, type Character, elizaLogger, settings, stringToUuid } from '@elizaos/core';
 import { bootstrapPlugin } from '@elizaos/plugin-bootstrap';

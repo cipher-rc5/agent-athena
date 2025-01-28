@@ -56,3 +56,15 @@ pnpm add -D @types/yargs @types/better-sqlite3
 ```
 
 improved [chat/index](src/chat/index.ts) type safety by adding types
+
+to incorporate `plugin-stargaze`
+
+```sh
+pnpm add zod axios
+```
+
+to incorporate `plugin-twitter`
+
+```sh
+pnpm add agent-twitter-client
+```

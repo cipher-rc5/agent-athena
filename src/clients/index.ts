@@ -1,3 +1,5 @@
+// src/clients/index.ts
+
 import { AutoClientInterface } from '@elizaos/client-auto';
 import { DiscordClientInterface } from '@elizaos/client-discord';
 import { TwitterClientInterface } from '@elizaos/client-twitter';

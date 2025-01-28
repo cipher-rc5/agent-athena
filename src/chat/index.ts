@@ -1,3 +1,5 @@
+// src/chat/index.ts
+
 import { settings } from '@elizaos/core';
 import readline from 'readline';
 
