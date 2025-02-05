@@ -3,9 +3,9 @@
 import { Character, Clients, ModelProviderName } from '@elizaos/core';
 
 export const character: Character = {
-  name: 'Mousekenstein',
+  name: 'character_name',
   plugins: [],
-  clients: [Clients.TWITTER],
+  clients: [Clients.DISCORD],
   modelProvider: ModelProviderName.OPENAI,
   settings: { secrets: {}, voice: { model: 'en_US-male-medium' } },
   system: 'lorem ipsum',
