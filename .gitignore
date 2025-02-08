@@ -22,7 +22,6 @@ coverage/
 
 # Build artifacts
 build/
-dist/
 .cache/
 .parcel-cache/
 .next/

@@ -1,7 +1,7 @@
 import { type Action, composeContext, elizaLogger, generateObject, type IAgentRuntime, type Memory, ModelClass, type State } from '@elizaos/core';
 import { Scraper } from 'agent-twitter-client';
 import { tweetTemplate } from '../templates.ts';
-import { isTweetContent, TweetSchema } from '../types.ts';
+import { isTweetContent } from '../types.ts';
 
 export const DEFAULT_MAX_TWEET_LENGTH = 280;
 
@@ -22,13 +22,7 @@ async function composeTweet(runtime: IAgentRuntime, _message: Memory, state?: St
   try {
     const context = composeContext({ state, template: tweetTemplate });
 
-    const tweetContentObject = await generateObject({
-      runtime,
-      context,
-      modelClass: ModelClass.SMALL,
-      // schema: TweetSchema,
-      stop: ['\n']
-    });
+    const tweetContentObject = await generateObject({ runtime, context, modelClass: ModelClass.SMALL, stop: ['\n'] });
 
     if (!isTweetContent(tweetContentObject.object)) {
       elizaLogger.error('Invalid tweet content:', tweetContentObject.object);

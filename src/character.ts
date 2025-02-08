@@ -2,17 +2,11 @@
 
 import { Character, Clients, ModelProviderName } from '@elizaos/core';
 import { coingeckoPlugin } from '../plugins/plugin-coingecko/src/index.ts';
-import { dexScreenerPlugin } from '../plugins/plugin-dexscreener/src/index.ts';
-import { pythDataPlugin } from '../plugins/plugin-pyth-data/src/index.ts';
 import { webSearchPlugin } from '../plugins/plugin-web-search/src/index.ts';
-
-// operational plugins: webSearchPlugin, dexScreenerPlugin, coingeckoPlugin
 
 export const character: Character = {
   name: 'athena',
   username: 'athena',
-  // plugins: [webSearchPlugin, dexScreenerPlugin, pythDataPlugin],
-  // pyth plugin still encountering execution errors - currently being tested in greater depth
   plugins: [webSearchPlugin, coingeckoPlugin],
   clients: [Clients.DISCORD],
   modelProvider: ModelProviderName.OPENAI,
